@@ -1,16 +1,14 @@
 import React from 'react';
-import './App.css';
+import NavBar from './components/NavBar';
+
+import GlobalStyle from './styles/Global';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="logo.png" className="App-logo" alt="logo" />
-        <p>
-          Site en cours de construction
-        </p>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <GlobalStyle />
+    </>
   );
 }
 
