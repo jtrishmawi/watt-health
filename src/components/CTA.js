@@ -12,9 +12,10 @@ const Button = styled.a`
   cursor: pointer;
   letter-spacing: 0.07em;
   white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: bold;
 
   .text {
-    font-family: proxima-nova, monospace;
     transform: translate3d(0, 0.7em, 0);
     display: block;
     transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
