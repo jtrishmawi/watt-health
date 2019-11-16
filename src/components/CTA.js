@@ -12,13 +12,19 @@ const Button = styled.button`
   background: none;
   outline: none;
   padding: 1rem;
-  border-radius: 5px;
-  display: none;
+  border: none;
 
   img {
-    height: 100%;
+    width: 100%;
+    max-width: 100px;
     object-fit: contain;
     object-position: left;
+  }
+
+  span {
+    flex: 1 auto;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 `;
 
@@ -26,7 +32,7 @@ const CTA = ({ children = '' }) => {
   return (
     <Button>
       <img src="button.png" alt="Cliquez ici" />
-      {children}
+      <span>{children}</span>
     </Button>
   );
 };

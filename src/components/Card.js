@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Card = styled.div`
   display: flex;
   justify-content: center;
-  align-items: ${props => props.center ? 'center' : 'flex-end'};
+  align-items: center;
   width: 100%;
   height: 100%;
   background-image: url(${props => props.bgImg});
@@ -25,6 +25,10 @@ export const CardBody = styled.div`
 
   p {
     font-size: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `;
 

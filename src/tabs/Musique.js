@@ -13,7 +13,7 @@ const Musique = () => {
           </p>
         </CardLeft>
         <CardRight>
-          <CTA>Concert</CTA>
+          <CTA>Achetez Maintenant</CTA>
         </CardRight>
       </CardBody>
     </Card>

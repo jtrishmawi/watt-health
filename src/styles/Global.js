@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
   *::before {
     margin: 0px;
     padding: 0px;
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 
   [tabindex]:focus {

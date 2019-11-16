@@ -4,7 +4,7 @@ import CTA from '../components/CTA'
 
 const Sport = () => {
   return (
-    <Card bgImg="https://loremflickr.com/640/360" center>
+    <Card bgImg="https://loremflickr.com/640/360">
       <CardBody>
         <CardLeft>
           <h1>Sport</h1>
@@ -13,7 +13,7 @@ const Sport = () => {
           </p>
         </CardLeft>
         <CardRight>
-          <CTA>Concert</CTA>
+          <CTA>Achetez Maintenant</CTA>
         </CardRight>
       </CardBody>
     </Card>
