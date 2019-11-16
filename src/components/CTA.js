@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = styled.a`
+const Link = styled.a`
   color: #000000;
   padding: 0.7em calc(0.7em * 1.2);
   margin: calc(0.7em * 1.2) 0.7rem;
@@ -123,13 +123,13 @@ const Button = styled.a`
 
 const CTA = ({ href = '#', children = '' }) => {
   return (
-    <Button {...href}>
+    <Link {...href}>
       <span className="text">{children}</span>
       <span className="line -right"></span>
       <span className="line -top"></span>
       <span className="line -left"></span>
       <span className="line -bottom"></span>
-    </Button >
+    </Link >
   );
 };
 

@@ -6,9 +6,9 @@ const Image = styled.img`
   margin: auto 0;
 `;
 
-const Logo = () => {
+const Logo = ({ className }) => {
   return (
-    <Image src="logo.png" alt="Watt Health" />
+    <Image src="logo.png" alt="Watt Health" className={className} />
   )
 }
 

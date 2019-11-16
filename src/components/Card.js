@@ -23,6 +23,10 @@ export const CardBody = styled.div`
     font-size: 5rem;
   }
 
+  h2 {
+    font-size: 3.5rem;
+  }
+
   p {
     font-size: 2rem;
   }
