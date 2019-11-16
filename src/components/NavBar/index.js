@@ -1,20 +1,20 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { Tabbable } from "reakit/Tabbable";
 import styled from "styled-components";
-import { useSpring, animated, config } from "react-spring";
+import { Tween } from 'react-gsap';
 
 import Brand from "./Brand";
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
 
 
-const NavBar = styled(animated.nav)`
+const NavBarWrapper = styled.nav`
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  background: #bcbcbc;
-  z-index: 1;
+  background: #ffffff;
+  z-index: 2;
   font-size: 1.4rem;
 `;
 
@@ -27,7 +27,7 @@ const FlexContainer = styled.div`
   height: 7rem;
 `;
 
-const NavLinks = styled(animated.ul)`
+const NavLinks = styled.ul`
   justify-self: end;
   list-style-type: none;
   margin: auto 0;
@@ -63,43 +63,46 @@ const BurgerWrapper = styled.div`
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const barAnimation = useSpring({
-    from: { transform: 'translate3d(0, -10rem, 0)' },
-    transform: 'translate3d(0, 0, 0)',
-  });
-
-  const linkAnimation = useSpring({
-    from: { transform: 'translate3d(0, 30px, 0)', opacity: 0 },
-    to: { transform: 'translate3d(0, 0, 0)', opacity: 1 },
-    delay: 800,
-    config: config.wobbly,
-  });
 
   return (
     <>
-      <NavBar style={barAnimation}>
-        <FlexContainer>
-          <Brand />
-          <NavLinks style={linkAnimation}>
-          <Tabbable as="a">Sport,</Tabbable>
-          <Tabbable as="a">Musique,</Tabbable>
-          <Tabbable as="a">Santé,</Tabbable>
-          <Tabbable as="a">… quoi d’autre ?</Tabbable>
-          </NavLinks>
-          <BurgerWrapper>
-            <BurgerMenu
-              navbarState={isOpen}
-              handleNavbar={() => setIsOpen(state => !state)}
-            />
-          </BurgerWrapper>
-        </FlexContainer>
-      </NavBar>
+      <Tween from={{ transform: 'translate3d(0, -10rem, 0)' }} to={{ transform: 'translate3d(0, 0, 0)' }} >
+        <NavBarWrapper>
+          <FlexContainer>
+            <Brand />
+            <Tween
+              from={{ transform: 'translate3d(0, 30px, 0)', opacity: 0 }}
+              to={{ transform: 'translate3d(0, 0, 0)', opacity: 1 }}
+              delay={0.8}
+              ease="Elastic.easeInOut"
+            >
+              <NavLinks>
+                <Tabbable as="a">Sport,</Tabbable>
+                <Tabbable as="a">Musique,</Tabbable>
+                <Tabbable as="a">Santé,</Tabbable>
+                <Tabbable as="a">… quoi d’autre ?</Tabbable>
+              </NavLinks>
+            </Tween>
+            <BurgerWrapper>
+              <BurgerMenu
+                navbarState={isOpen}
+                handleNavbar={() => setIsOpen(state => !state)}
+              />
+            </BurgerWrapper>
+          </FlexContainer>
+        </NavBarWrapper>
+      </Tween>
       <CollapseMenu
         navbarState={isOpen}
-        handleNavbar={() => setIsOpen(state => !state)}
       />
     </>
   )
 }
 
 export default Navbar
+
+// open.interpolate({
+//   range: [0, 0.2, 0.3, 1],
+//   output: [0, -20, 0, -200],
+// }).interpolate(openValue => `translate3d(0, ${openValue}px, 0`),
+// }}

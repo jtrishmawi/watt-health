@@ -1,10 +1,11 @@
 import React from 'react';
+import Card from '../components/Card';
 
 const Sport = () => {
   return (
-    <div>
+    <Card>
       Sport
-    </div>
+    </Card>
   );
 };
 
