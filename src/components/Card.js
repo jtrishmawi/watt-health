@@ -12,7 +12,7 @@ export const Card = styled.div`
 `;
 
 export const CardBody = styled.div`
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.8);
   min-height: 33%;
   padding: 2rem 3rem;
   display: flex;

@@ -4,7 +4,7 @@ import CTA from '../components/CTA'
 
 const Musique = () => {
   return (
-    <Card bgImg="https://loremflickr.com/640/360">
+    <Card bgImg="images/slides/9XrYUO8laY4.jpg">
       <CardBody>
         <CardLeft>
           <h1>Musique</h1>

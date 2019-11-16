@@ -4,7 +4,7 @@ import CTA from '../components/CTA'
 
 const Sante = () => {
   return (
-    <Card bgImg="https://loremflickr.com/640/360">
+    <Card bgImg="images/slides/h_q9c1RUdzc.jpg">
       <CardBody>
         <CardLeft>
           <h1>Sante</h1>
