@@ -3,13 +3,13 @@ import { Tabbable } from "reakit/Tabbable";
 import styled from "styled-components";
 
 const Image = styled.img`
-  height: 85%;
+  height: 80%;
   margin: auto 0;
 `;
 
 const Brand = () => {
   return (
-    <Tabbable as={Image} src="logo.png" alt="Watt Health" />
+    <Tabbable as={Image} src="navbar.png" alt="Watt Health" />
   )
 }
 
