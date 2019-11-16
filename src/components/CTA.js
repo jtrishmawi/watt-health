@@ -13,6 +13,7 @@ const Button = styled.button`
   outline: none;
   padding: 1rem;
   border-radius: 5px;
+  display: none;
 
   img {
     height: 100%;

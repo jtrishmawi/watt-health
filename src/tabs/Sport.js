@@ -1,10 +1,21 @@
 import React from 'react';
-import { Card } from '../components/Card';
+import { Card, CardBody, CardLeft, CardRight } from '../components/Card';
+import CTA from '../components/CTA'
 
 const Sport = () => {
   return (
-    <Card>
-      Sport
+    <Card bgImg="https://loremflickr.com/640/360" center>
+      <CardBody>
+        <CardLeft>
+          <h1>Sport</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut iste accusantium sint excepturi velit eligendi laborum veniam facere, nulla pariatur dicta odio non laudantium voluptate inventore porro culpa sunt possimus.
+          </p>
+        </CardLeft>
+        <CardRight>
+          <CTA>Concert</CTA>
+        </CardRight>
+      </CardBody>
     </Card>
   );
 };
