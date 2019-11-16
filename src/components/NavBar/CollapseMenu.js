@@ -7,7 +7,7 @@ import { useSpring, animated } from 'react-spring';
 const CollapseWrapper = styled(animated.div)`
   background: #bcbcbc;
   position: fixed;
-  top: 4.5rem;
+  top: 6.5rem;
   left: 0;
   right: 0;
 `;
