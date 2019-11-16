@@ -2,95 +2,132 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.a`
-  display: flex;
-  padding: 10px 45px;
-  text-decoration: none;
-  font-size: 2.5rem;
-  color: white;
-  background: #000000;
-  transition: 1s;
-  box-shadow: 6px 6px 0 black;
-  transform: skewX(-15deg);
-  &:focus {
-   outline: none; 
+  color: #000000;
+  padding: 0.7em calc(0.7em * 1.2);
+  margin: calc(0.7em * 1.2) 0.7rem;
+  display: inline-block;
+  border: 3px solid transparent;
+  position: relative;
+  font-size: 2em;
+  cursor: pointer;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+
+  .text {
+    font-family: proxima-nova, monospace;
+    transform: translate3d(0, 0.7em, 0);
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
   }
 
-  &:hover {
-    transition: 0.5s;
-    box-shadow: 10px 10px 0 #ffec00;
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: calc(0.7em * 1.2);
+    right: calc(0.7em * 1.2);
+    height: 3px;
+    background: #ffce00;
+    transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+    transform-origin: left;
   }
 
-  & span:nth-child(2) {
-    transition: 0.5s;
-    margin-right: 0px;
+  .line {
+    position: absolute;
+    background: #ffce00;
   }
 
-  &:hover  span:nth-child(2) {
-    transition: 0.5s;
-    margin-right: 45px;
+  .line.-right, .line.-left {
+    width: 3px;
+    bottom: -3px;
+    top: -3px;
+    transform: scale3d(1, 0, 1);
   }
 
-  span {
-    transform: skewX(15deg) 
+  .line.-top, .line.-bottom {
+    height: 3px;
+    left: -3px;
+    right: -3px;
+    transform: scale3d(0, 1, 1);
   }
 
-  span:nth-child(2) {
-    width: 20px;
-    margin-left: 30px;
-    position: relative;
-    top: 12%;
+  .line.-right {
+    right: -3px;
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+    transform-origin: top;
   }
 
-  path.one {
-    transition: 0.4s;
-    transform: translateX(-60%);
+  .line.-top {
+    top: -3px;
+    transition: transform 0.08s linear 0.43s;
+    transform-origin: left;
   }
 
-  path.two {
-    transition: 0.5s;
-    transform: translateX(-30%);
+  .line.-left {
+    left: -3px;
+    transition: transform 0.08s linear 0.51s;
+    transform-origin: bottom;
   }
 
-  &:hover path.three {
-    animation: color_anim 1s infinite 0.2s;
+  .line.-bottom {
+    bottom: -3px;
+    transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+    transform-origin: right;
   }
 
-  &:hover path.one {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.6s;
+  &:hover .text,
+  &:active .text {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
   }
 
-  &:hover path.two {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.4s;
+  &:hover:after,
+  &:active:after {
+    transform: scale3d(0, 1, 1);
+    right: -3px;
+    left: -3px;
+    transform-origin: right;
+    transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
   }
 
-  @keyframes color_anim {
-    0% {
-        fill: white;
-    }
-    50% {
-        fill: #ffec00;
-    }
-    100% {
-        fill: white;
-    }
+  &:hover .line,
+  &:active .line {
+    transform: scale3d(1, 1, 1);
+  }
+
+  &:hover .line.-right,
+  &:active .line.-right {
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+    transform-origin: bottom;
+  }
+
+  &:hover .line.-top,
+  &:active .line.-top {
+    transition: transform 0.08s linear 0.4s;
+    transform-origin: right;
+  }
+
+  &:hover .line.-left,
+  &:active .line.-left {
+    transition: transform 0.08s linear 0.48s;
+    transform-origin: top;
+  }
+
+  &:hover .line.-bottom,
+  &:active .line.-bottom {
+    transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+    transform-origin: left;
   }
 `;
 
-const CTA = ({ children = '' }) => {
+const CTA = ({ href = '#', children = '' }) => {
   return (
-    <Button>
-      <span>{children}</span>
-      <span>
-        <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-          <g id="arrow" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-            <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
-            <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
-            <path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
-          </g>
-        </svg>
-      </span> 
+    <Button {...href}>
+      <span class="text">{children}</span>
+      <span class="line -right"></span>
+      <span class="line -top"></span>
+      <span class="line -left"></span>
+      <span class="line -bottom"></span>
     </Button >
   );
 };
