@@ -43,7 +43,7 @@ function App() {
             <Tween from={{ x: '100%', opacity: 0 }} to={{ x: '0%', opacity: 1 }} >
               <section><Sante /></section>
             </Tween>
-            <Tween from={{ y: '-100%', opacity: 0 }} to={{ y: '1%', opacity: 1 }} >
+            <Tween from={{ y: '-100%', opacity: 0 }} to={{ y: '0%', opacity: 1 }} >
               <section><Autre /></section>
             </Tween>
           </Timeline>

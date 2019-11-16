@@ -123,11 +123,11 @@ const Button = styled.a`
 const CTA = ({ href = '#', children = '' }) => {
   return (
     <Button {...href}>
-      <span class="text">{children}</span>
-      <span class="line -right"></span>
-      <span class="line -top"></span>
-      <span class="line -left"></span>
-      <span class="line -bottom"></span>
+      <span className="text">{children}</span>
+      <span className="line -right"></span>
+      <span className="line -top"></span>
+      <span className="line -left"></span>
+      <span className="line -bottom"></span>
     </Button >
   );
 };
