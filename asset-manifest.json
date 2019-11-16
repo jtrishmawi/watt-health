@@ -1,22 +1,21 @@
 {
   "files": {
     "main.css": "/watt-health/static/css/main.da0491d2.chunk.css",
-    "main.js": "/watt-health/static/js/main.e27dd2b1.chunk.js",
-    "main.js.map": "/watt-health/static/js/main.e27dd2b1.chunk.js.map",
+    "main.js": "/watt-health/static/js/main.0091a018.chunk.js",
+    "main.js.map": "/watt-health/static/js/main.0091a018.chunk.js.map",
     "runtime-main.js": "/watt-health/static/js/runtime-main.5c6da236.js",
     "runtime-main.js.map": "/watt-health/static/js/runtime-main.5c6da236.js.map",
-    "static/js/2.5fefb58c.chunk.js": "/watt-health/static/js/2.5fefb58c.chunk.js",
-    "static/js/2.5fefb58c.chunk.js.map": "/watt-health/static/js/2.5fefb58c.chunk.js.map",
+    "static/js/2.661b761b.chunk.js": "/watt-health/static/js/2.661b761b.chunk.js",
+    "static/js/2.661b761b.chunk.js.map": "/watt-health/static/js/2.661b761b.chunk.js.map",
     "index.html": "/watt-health/index.html",
-    "precache-manifest.4cad52de0accc13f2b96ba526bae3cf3.js": "/watt-health/precache-manifest.4cad52de0accc13f2b96ba526bae3cf3.js",
+    "precache-manifest.61b3afc80b2324417abc4d685055fe8e.js": "/watt-health/precache-manifest.61b3afc80b2324417abc4d685055fe8e.js",
     "service-worker.js": "/watt-health/service-worker.js",
-    "static/css/main.da0491d2.chunk.css.map": "/watt-health/static/css/main.da0491d2.chunk.css.map",
-    "static/media/logo.svg": "/watt-health/static/media/logo.fc22f6d4.svg"
+    "static/css/main.da0491d2.chunk.css.map": "/watt-health/static/css/main.da0491d2.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.5c6da236.js",
-    "static/js/2.5fefb58c.chunk.js",
+    "static/js/2.661b761b.chunk.js",
     "static/css/main.da0491d2.chunk.css",
-    "static/js/main.e27dd2b1.chunk.js"
+    "static/js/main.0091a018.chunk.js"
   ]
 }
