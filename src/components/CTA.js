@@ -28,14 +28,14 @@ const Button = styled.a`
     left: calc(0.7em * 1.2);
     right: calc(0.7em * 1.2);
     height: 3px;
-    background: #ffce00;
+    background: #ffec00;
     transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
     transform-origin: left;
   }
 
   .line {
     position: absolute;
-    background: #ffce00;
+    background: #ffec00;
   }
 
   .line.-right, .line.-left {
