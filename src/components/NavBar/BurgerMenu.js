@@ -25,7 +25,6 @@ const Wrapper = styled.div`
     bottom: -0.7rem;
     border: 1px solid #ffec00;
     box-shadow: 0px 0px 5px  #ffec00;
-    border-radius: 10px;
     pointer-events: none;
   }
 
