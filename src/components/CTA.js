@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  display: inline-flex;
-  justify-content: start;
+  display: flex;
+  justify-content: center;
   align-items: center;
   height: 30vh;
   max-height: 100px;
@@ -12,7 +12,7 @@ const Button = styled.button`
   background: none;
   outline: none;
   padding: 1rem;
-  border: none;
+  border-radius: 5px;
 
   img {
     width: 100%;
@@ -22,9 +22,9 @@ const Button = styled.button`
   }
 
   span {
-    flex: 1 auto;
     font-size: 1.5rem;
     font-weight: bold;
+    margin-left: 1rem;
   }
 `;
 

@@ -15,7 +15,7 @@ export const CardBody = styled.div`
   background: rgba(255, 255, 255, 0.3);
   min-height: 33%;
   padding: 2rem 3rem;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 
