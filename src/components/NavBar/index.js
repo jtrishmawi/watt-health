@@ -66,13 +66,13 @@ const Navbar = () => {
   
   return (
     <>
-      <Tween from={{ transform: 'translate3d(0, -10rem, 0)' }} to={{ transform: 'translate3d(0, 0, 0)' }} >
+      <Tween from={{ css: { transform: 'translate3d(0, -10rem, 0)' }}} to={{ css: { transform: 'translate3d(0, 0, 0)' }}} >
         <NavBarWrapper>
           <FlexContainer>
             <Brand />
             <Tween
-              from={{ transform: 'translate3d(0, 30px, 0)', opacity: 0 }}
-              to={{ transform: 'translate3d(0, 0, 0)', opacity: 1 }}
+              from={{ css: { transform: 'translate3d(0, 30px, 0)', opacity: 0 }}}
+              to={{ css: { transform: 'translate3d(0, 0, 0)', opacity: 1 }}}
               delay={0.8}
               ease="Elastic.easeInOut"
             >

@@ -55,6 +55,7 @@ const Textarea = styled.textarea`
   border: solid 1px #ffec00;
   border-bottom: none;
   transition: all 0.3s ease-in-out;
+  resize: none;
 
   &:hover {
     background: #ffec00;
