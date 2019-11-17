@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "87331c398a5dc5496e2d581b8cc2cc57",
+    "revision": "b6af428949b1f1e99076c33b119fea72",
     "url": "/watt-health/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/watt-health/static/js/2.117f1ab7.chunk.js"
   },
   {
-    "revision": "368d4030d10c90053c2b",
-    "url": "/watt-health/static/js/main.b3391ed0.chunk.js"
+    "revision": "e685fe8d9e04341d6fd8",
+    "url": "/watt-health/static/js/main.5fd1225b.chunk.js"
   },
   {
     "revision": "065e2e4a647aaaac6d50",
