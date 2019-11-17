@@ -23,7 +23,7 @@ const Container = styled.div`
 
   #container section {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 6.5rem);
     position: absolute;
     background-color: #fff;
   }

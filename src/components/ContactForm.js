@@ -38,6 +38,10 @@ const Input = styled.input`
     border: solid 1px #ffec00;
     text-transform: uppercase;
   }
+
+  @media (max-width: 768px) {
+    height: 40px;
+  }
 `;
 
 const Textarea = styled.textarea`
@@ -54,6 +58,11 @@ const Textarea = styled.textarea`
 
   &:hover {
     background: #ffec00;
+  }
+
+  @media (max-width: 768px) {
+    height: 70px;
+    max-height: 70px;
   }
 `;
 
