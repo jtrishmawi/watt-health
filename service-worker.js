@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/watt-health/precache-manifest.26e64ac3b30942f3d97380a02c0b1b1f.js"
+  "/watt-health/precache-manifest.bc068436f3e6779fac1197ba37ad3244.js"
 );
 
 self.addEventListener('message', (event) => {
