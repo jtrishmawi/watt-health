@@ -59,10 +59,6 @@ const StyledCardRight = styled(CardRight)`
   ${StyledLogo} {
     height: 25vh;
     margin: 0;
-
-    @media (max-width: 768px) {
-      max-height: 20vh;
-    }
   }
 `;
 
