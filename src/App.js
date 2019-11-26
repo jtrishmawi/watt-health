@@ -37,13 +37,13 @@ function App() {
         <Scene triggerHook="onLeave" duration="300%" pin>
           <Timeline wrapper={<div id="container" />} >
             <section><Musique /></section>
-            <Tween from={{ css: { x: '-100%', opacity: 0 }}} to={{css: { x: '0%', opacity: 1 }}}>
+            <Tween from={{ css: { x: '-100%' }}} to={{css: { x: '0%' }}}>
               <section><Sport /></section>
             </Tween>
-            <Tween from={{ css: { x: '100%', opacity: 0 }}} to={{ css: {x: '0%', opacity: 1 }}}>
+            <Tween from={{ css: { x: '100%' }}} to={{ css: {x: '0%' }}}>
               <section><Sante /></section>
             </Tween>
-            <Tween from={{ css: { y: '-100%', opacity: 0 }}} to={{css: { y: '0%', opacity: 1 }}}>
+            <Tween from={{ css: { y: '-100%' }}} to={{css: { y: '0%' }}}>
               <section><Autre /></section>
             </Tween>
           </Timeline>
