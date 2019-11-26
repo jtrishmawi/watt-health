@@ -83,8 +83,8 @@ const Navbar = () => {
               ease="Elastic.easeInOut"
             >
               <NavLinks>
-                <Tabbable as="a">Musique,</Tabbable>
                 <Tabbable as="a">Sport,</Tabbable>
+                <Tabbable as="a">Musique,</Tabbable>
                 <Tabbable as="a">Santé,</Tabbable>
                 <Tabbable as="a">… quoi d’autre ?</Tabbable>
               </NavLinks>

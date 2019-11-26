@@ -36,14 +36,14 @@ function App() {
       <Controller>
         <Scene triggerHook="onLeave" duration="300%" pin>
           <Timeline wrapper={<div id="container" />} >
-            <section><Musique /></section>
-            <Tween from={{ css: { x: '-100%' }}} to={{css: { x: '0%' }}}>
-              <section><Sport /></section>
+            <section><Sport /></section>
+            <Tween from={{ css: { x: '-100%' } }} to={{ css: { x: '0%' } }}>
+              <section><Musique /></section>
             </Tween>
-            <Tween from={{ css: { x: '100%' }}} to={{ css: {x: '0%' }}}>
+            <Tween from={{ css: { x: '100%' } }} to={{ css: { x: '0%' } }}>
               <section><Sante /></section>
             </Tween>
-            <Tween from={{ css: { y: '-120%' }}} to={{css: { y: '0%' }}}>
+            <Tween from={{ css: { y: '-120%' } }} to={{ css: { y: '0%' } }}>
               <section><Autre /></section>
             </Tween>
           </Timeline>

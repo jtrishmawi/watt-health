@@ -45,8 +45,8 @@ const CollapseMenu = ({ navbarState }) => {
     >
       <CollapseWrapper>
         <NavLinks>
-          <Tabbable as="li"><a href="/">Musique,</a></Tabbable>
           <Tabbable as="li"><a href="/">Sport,</a></Tabbable>
+          <Tabbable as="li"><a href="/">Musique,</a></Tabbable>
           <Tabbable as="li"><a href="/">Santé,</a></Tabbable>
           <Tabbable as="li"><a href="/">… quoi d’autre ?</a></Tabbable>
         </NavLinks>

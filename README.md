@@ -1,3 +1,3 @@
 # Watt Health
 
-Musique, Sport, Santé, … quoi d’autre ?
+Sport, Musique, Santé, … quoi d’autre ?
