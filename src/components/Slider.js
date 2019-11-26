@@ -5,7 +5,7 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   overflow-y: scroll;
-  height: calc(100vh - 6.5rem);
+  height: calc(100vh - 11.5rem);
   padding: 0 1rem;
 `;
 
@@ -27,11 +27,12 @@ const Slider = () => {
     const signal = abortController.signal;
 
     const fetchSlides = async () => {
-      const response = await fetch('slides.txt', { signal: signal });
-      const data = await response.text();
-      const items = data.split(/\r|\n/).reduce((acc, item, index) => {
+      const response = await fetch('https://www.instagram.com/watthealth75/?__a=1', { signal: signal });
+      const data = await response.json();
+
+      const items = data.graphql.user.edge_owner_to_timeline_media.edges.reduce((acc, item, index) => {
         const column = index % 3
-        acc[column] = [].concat((acc[column] || []), item);
+        acc[column] = [].concat((acc[column] || []), item.node.display_url);
         return acc
       }, [[], [], []]);
       setSlides(items);

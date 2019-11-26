@@ -4,12 +4,14 @@ import CTA from '../components/CTA'
 
 const Musique = () => {
   return (
-    <Card bgImg="images/slides/9XrYUO8laY4.jpg">
+    <Card bgImg="images/sections/musique.jpg">
       <CardBody>
         <CardLeft>
           <h1>Musique</h1>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut iste accusantium sint excepturi velit eligendi laborum veniam facere, nulla pariatur dicta odio non laudantium voluptate inventore porro culpa sunt possimus.
+            Envie de sortir ? de danser ? de vous amuser avec vos amis ?
+            <br />
+            La beach party vous accueille le samedi 21 décembre 2019 les pieds dans le sable !
           </p>
         </CardLeft>
         <CardRight>

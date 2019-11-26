@@ -4,12 +4,14 @@ import CTA from '../components/CTA'
 
 const Sante = () => {
   return (
-    <Card bgImg="images/slides/h_q9c1RUdzc.jpg">
+    <Card bgImg="images/sections/sante.jpg">
       <CardBody>
         <CardLeft>
           <h1>Sante</h1>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut iste accusantium sint excepturi velit eligendi laborum veniam facere, nulla pariatur dicta odio non laudantium voluptate inventore porro culpa sunt possimus.
+            Découvrez à chaque évènement notre dimension "healthy":
+            <br />
+            Une santé de fer, une mine d'or et un moral d'acier !
           </p>
         </CardLeft>
         <CardRight>

@@ -23,13 +23,13 @@ const Wrapper = styled.div`
     right: -0.7rem;
     left: -0.7rem;
     bottom: -0.7rem;
-    border: 1px solid #ffec00;
-    box-shadow: 0px 0px 5px  #ffec00;
+    border: 1px solid #fece15;
+    box-shadow: 0px 0px 5px  #fece15;
     pointer-events: none;
   }
 
   & span {
-    background: #ffec00;
+    background: #fece15;
     display: block;
     position: relative;
     width: 3.5rem;

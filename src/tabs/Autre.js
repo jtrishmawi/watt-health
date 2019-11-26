@@ -19,7 +19,7 @@ const StyledCardBody = styled.div`
   }
 
   h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   p {
@@ -36,6 +36,7 @@ const StyledLogo = styled(Logo)``;
 const StyledCardLeft = styled(CardLeft)`
   flex: 50%;
   max-width: 50%;
+  padding-right: 1.5rem;
 
   @media (max-width: 768px) {
     display: none;
@@ -49,6 +50,8 @@ const StyledCardRight = styled(CardRight)`
   align-items: center;
   flex: 50%;
   max-width: 50%;
+  padding-left: 1.5rem;
+  height: calc(100vh - 6.5rem);
 
   @media (max-width: 768px) {
     width: 100%;

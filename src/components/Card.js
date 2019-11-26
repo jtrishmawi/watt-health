@@ -16,8 +16,9 @@ export const CardBody = styled.div`
   min-height: 33%;
   padding: 2rem 3rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 
   h1 {
     font-size: 5rem;
@@ -29,6 +30,7 @@ export const CardBody = styled.div`
 
   p {
     font-size: 2rem;
+    text-align: justify;
   }
 
   @media (max-width: 768px) {

@@ -43,7 +43,7 @@ function App() {
             <Tween from={{ css: { x: '100%' }}} to={{ css: {x: '0%' }}}>
               <section><Sante /></section>
             </Tween>
-            <Tween from={{ css: { y: '-100%' }}} to={{css: { y: '0%' }}}>
+            <Tween from={{ css: { y: '-120%' }}} to={{css: { y: '0%' }}}>
               <section><Autre /></section>
             </Tween>
           </Timeline>

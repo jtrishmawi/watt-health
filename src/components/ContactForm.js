@@ -6,6 +6,7 @@ const Container = styled.div`
 
   h2 {
     text-align: center;
+    color: #fece15;
   }
 `;
 
@@ -23,19 +24,19 @@ const Input = styled.input`
   padding: 0px 15px 0px 15px;
   background: transparent;
   outline: none;
-  border: solid 1px #ffec00;
+  border: solid 1px #fece15;
   border-bottom: none;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    background: #ffec00;
+    background: #fece15;
   }
 
   &[type="submit"] {
     padding: 0;
     margin: -5px 0px 0px 0px;
     cursor: pointer;
-    border: solid 1px #ffec00;
+    border: solid 1px #fece15;
     text-transform: uppercase;
   }
 
@@ -52,13 +53,13 @@ const Textarea = styled.textarea`
   padding: 15px;
   background: transparent;
   outline: none;
-  border: solid 1px #ffec00;
+  border: solid 1px #fece15;
   border-bottom: none;
   transition: all 0.3s ease-in-out;
   resize: none;
 
   &:hover {
-    background: #ffec00;
+    background: #fece15;
   }
 
   @media (max-width: 768px) {

@@ -14,6 +14,7 @@ const Link = styled.a`
   white-space: nowrap;
   text-transform: uppercase;
   font-weight: bold;
+  text-decoration: none;
 
   .text {
     transform: translate3d(0, 0.7em, 0);
@@ -28,14 +29,14 @@ const Link = styled.a`
     left: calc(0.7em * 1.2);
     right: calc(0.7em * 1.2);
     height: 3px;
-    background: #ffec00;
+    background: #fece15;
     transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
     transform-origin: left;
   }
 
   .line {
     position: absolute;
-    background: #ffec00;
+    background: #fece15;
   }
 
   .line.-right, .line.-left {
@@ -123,7 +124,7 @@ const Link = styled.a`
 
 const CTA = ({ href = '#', children = '' }) => {
   return (
-    <Link {...href}>
+    <Link href={href} target="_blank" rel="noopener noreferrer">
       <span className="text">{children}</span>
       <span className="line -right"></span>
       <span className="line -top"></span>

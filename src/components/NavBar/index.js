@@ -15,7 +15,7 @@ const NavBarWrapper = styled.nav`
   left: 0;
   background: #ffffff;
   z-index: 2;
-  font-size: 1.4rem;
+  font-size: 1.85rem;
 `;
 
 const FlexContainer = styled.div`
@@ -31,6 +31,8 @@ const NavLinks = styled.ul`
   justify-self: end;
   list-style-type: none;
   margin: auto 0;
+  flex: 1 auto;
+  text-align: center;
 
   & a {
     color: #000000;
@@ -43,8 +45,12 @@ const NavLinks = styled.ul`
     cursor: pointer;
 
     &:hover {
-      color: #ffec00;
-      border-bottom: 1px solid #ffec00;
+      color: #fece15;
+      border-bottom: 1px solid #fece15;
+    }
+
+    &:last-child {
+      margin-left: 3rem;
     }
 
     @media (max-width: 768px) {
@@ -63,16 +69,16 @@ const BurgerWrapper = styled.div`
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
     <>
-      <Tween from={{ css: { transform: 'translate3d(0, -10rem, 0)' }}} to={{ css: { transform: 'translate3d(0, 0, 0)' }}} >
+      <Tween from={{ css: { transform: 'translate3d(0, -10rem, 0)' } }} to={{ css: { transform: 'translate3d(0, 0, 0)' } }} >
         <NavBarWrapper>
           <FlexContainer>
             <Brand />
             <Tween
-              from={{ css: { transform: 'translate3d(0, 30px, 0)', opacity: 0 }}}
-              to={{ css: { transform: 'translate3d(0, 0, 0)', opacity: 1 }}}
+              from={{ css: { transform: 'translate3d(0, 30px, 0)', opacity: 0 } }}
+              to={{ css: { transform: 'translate3d(0, 0, 0)', opacity: 1 } }}
               delay={0.8}
               ease="Elastic.easeInOut"
             >

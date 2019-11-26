@@ -29,8 +29,8 @@ const NavLinks = styled.ul`
     cursor: pointer;
 
     &:hover {
-      color: #ffec00;
-      border-bottom: 1px solid #ffec00;
+      color: #fece15;
+      border-bottom: 1px solid #fece15;
     }
   }
 `;

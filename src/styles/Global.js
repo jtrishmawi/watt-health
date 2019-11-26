@@ -14,8 +14,8 @@ const GlobalStyles = createGlobalStyle`
 
   [tabindex]:focus {
     outline: 0;
-    border: 1px solid #ffec00;
-    box-shadow: 0px 0px 5px  #ffec00;
+    border: 1px solid #fece15;
+    box-shadow: 0px 0px 5px  #fece15;
   }
 
   html {

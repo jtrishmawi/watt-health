@@ -4,16 +4,18 @@ import CTA from '../components/CTA'
 
 const Sport = () => {
   return (
-    <Card bgImg="images/slides/nNkm5WUTD18.jpg">
+    <Card bgImg="images/sections/sport.jpg">
       <CardBody>
         <CardLeft>
           <h1>Sport</h1>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut iste accusantium sint excepturi velit eligendi laborum veniam facere, nulla pariatur dicta odio non laudantium voluptate inventore porro culpa sunt possimus.
+            Participez aux Hivernales de Beach-Volley, le 1er tournoi "mixte indoor" de Paris !
+            <br />
+            Aller hop, en maillot et c'est parti pour un week-end au chaud !!!
           </p>
         </CardLeft>
         <CardRight>
-          <CTA>Achetez Maintenant</CTA>
+          <CTA href="https://www.helloasso.com/associations/watt-health/evenements/les-hivernales-de-volley">Achetez Maintenant</CTA>
         </CardRight>
       </CardBody>
     </Card>
