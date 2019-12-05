@@ -2,7 +2,7 @@
   "name": "health",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.watt-health.fr",
+  "homepage": "https://watt-health.fr",
   "dependencies": {
     "abortcontroller-polyfill": "^1.4.0",
     "react": "^16.12.0",
