@@ -15,7 +15,7 @@ const Sport = () => {
           </p>
         </CardLeft>
         <CardRight>
-          <CTA href="https://www.helloasso.com/associations/watt-health/evenements/les-hivernales-de-volley">Achetez Maintenant</CTA>
+          <CTA href="https://www.helloasso.com/associations/watt-health/evenements/les-hivernales-de-volley">Inscrivez-Vous</CTA>
         </CardRight>
       </CardBody>
     </Card>
