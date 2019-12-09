@@ -73,7 +73,7 @@ const ContactForm = () => {
   return (
     <Container>
       <h2>Contactez-nous</h2>
-      <Form action="https://briskforms.com/go/0e24346a450ce462c7815fed865972e1" method="POST">
+      <Form action="https://forms.un-static.com/forms/78f5b21a882745b594cef42c2b3b3c8b1b658761" method="POST">
         <Input type="text" name="nom" placeholder="Nom" required/>
         <Input type="email" name="email" placeholder="Email" required/>
         <Input type="tel" name="telephone" placeholder="Téléphone" required/>
