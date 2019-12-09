@@ -9,7 +9,7 @@ const Sport = () => {
         <CardLeft>
           <h1>Sport</h1>
           <p>
-            Participez aux Hivernales de Beach-Volley, le 1er tournoi "mixte indoor" de Paris !
+            Participez aux Hivernales de Beach-Volley, le premier tournoi 3x3 mixte indoor de Paris !
             <br />
             Aller hop, en maillot et c'est parti pour un week-end au chaud !!!
           </p>
