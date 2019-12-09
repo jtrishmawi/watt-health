@@ -2,11 +2,14 @@ import React, { useState, useCallback } from 'react'
 import { Tabbable } from "reakit/Tabbable";
 import styled from "styled-components";
 import { Tween } from 'react-gsap';
-import { TweenMax } from 'gsap';
+import { gsap, TweenLite } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 import Brand from "./Brand";
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const NavBarWrapper = styled.nav`
   position: fixed;
@@ -70,6 +73,14 @@ const BurgerWrapper = styled.div`
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleClick = useCallback(e => {
+    const sectionId = e.target.getAttribute('href').substr(1);
+    const section = document.getElementById(sectionId);
+    const size = section.offsetTop;
+    const y = size - 65;
+    TweenLite.to(window, 1, { scrollTo: { y } });
+  }, []);
+
   return (
     <>
       <Tween from={{ css: { transform: 'translate3d(0, -10rem, 0)' } }} to={{ css: { transform: 'translate3d(0, 0, 0)' } }} >
@@ -83,10 +94,10 @@ const Navbar = () => {
               ease="Elastic.easeInOut"
             >
               <NavLinks>
-                <Tabbable as="a" href="#sport">Sport,</Tabbable>
-                <Tabbable as="a" href="#musique">Musique,</Tabbable>
-                <Tabbable as="a" href="#sante">Santé,</Tabbable>
-                <Tabbable as="a" href="#autre">… quoi d’autre ?</Tabbable>
+                <Tabbable as="a" href="#sport" onClick={handleClick} >Sport,</Tabbable>
+                <Tabbable as="a" href="#musique" onClick={handleClick} >Musique,</Tabbable>
+                <Tabbable as="a" href="#sante" onClick={handleClick} >Santé,</Tabbable>
+                <Tabbable as="a" href="#autre" onClick={handleClick} >… quoi d’autre ?</Tabbable>
               </NavLinks>
             </Tween>
             <BurgerWrapper>
@@ -100,6 +111,7 @@ const Navbar = () => {
       </Tween>
       <CollapseMenu
         navbarState={isOpen}
+        handleClick={handleClick}
       />
     </>
   )

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { Tabbable } from "reakit/Tabbable";
 import styled from 'styled-components';
 import { Tween } from 'react-gsap';
@@ -35,7 +35,7 @@ const NavLinks = styled.ul`
   }
 `;
 
-const CollapseMenu = ({ navbarState }) => {
+const CollapseMenu = ({ navbarState, handleClick }) => {
   return (
     <Tween
       from={{ css: { transform: 'translate3d(0, 0, 0)' } }}
@@ -45,10 +45,10 @@ const CollapseMenu = ({ navbarState }) => {
     >
       <CollapseWrapper>
         <NavLinks>
-          <Tabbable as="li"><a href="#sport">Sport,</a></Tabbable>
-          <Tabbable as="li"><a href="#musique">Musique,</a></Tabbable>
-          <Tabbable as="li"><a href="#sante">Santé,</a></Tabbable>
-          <Tabbable as="li"><a href="#autre">… quoi d’autre ?</a></Tabbable>
+          <Tabbable as="li"><a onClick={handleClick} href="#sport">Sport,</a></Tabbable>
+          <Tabbable as="li"><a onClick={handleClick} href="#musique">Musique,</a></Tabbable>
+          <Tabbable as="li"><a onClick={handleClick} href="#sante">Santé,</a></Tabbable>
+          <Tabbable as="li"><a onClick={handleClick} href="#autre">… quoi d’autre ?</a></Tabbable>
         </NavLinks>
       </CollapseWrapper>
     </Tween>
