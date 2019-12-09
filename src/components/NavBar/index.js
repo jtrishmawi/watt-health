@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import { Tabbable } from "reakit/Tabbable";
 import styled from "styled-components";
 import { Tween } from 'react-gsap';
+import { TweenMax } from 'gsap';
 
 import Brand from "./Brand";
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
-
 
 const NavBarWrapper = styled.nav`
   position: fixed;
@@ -83,10 +83,10 @@ const Navbar = () => {
               ease="Elastic.easeInOut"
             >
               <NavLinks>
-                <Tabbable as="a">Sport,</Tabbable>
-                <Tabbable as="a">Musique,</Tabbable>
-                <Tabbable as="a">Santé,</Tabbable>
-                <Tabbable as="a">… quoi d’autre ?</Tabbable>
+                <Tabbable as="a" href="#sport">Sport,</Tabbable>
+                <Tabbable as="a" href="#musique">Musique,</Tabbable>
+                <Tabbable as="a" href="#sante">Santé,</Tabbable>
+                <Tabbable as="a" href="#autre">… quoi d’autre ?</Tabbable>
               </NavLinks>
             </Tween>
             <BurgerWrapper>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Tabbable } from "reakit/Tabbable";
 import styled from 'styled-components';
 import { Tween } from 'react-gsap';
@@ -45,10 +45,10 @@ const CollapseMenu = ({ navbarState }) => {
     >
       <CollapseWrapper>
         <NavLinks>
-          <Tabbable as="li"><a href="/">Sport,</a></Tabbable>
-          <Tabbable as="li"><a href="/">Musique,</a></Tabbable>
-          <Tabbable as="li"><a href="/">Santé,</a></Tabbable>
-          <Tabbable as="li"><a href="/">… quoi d’autre ?</a></Tabbable>
+          <Tabbable as="li"><a href="#sport">Sport,</a></Tabbable>
+          <Tabbable as="li"><a href="#musique">Musique,</a></Tabbable>
+          <Tabbable as="li"><a href="#sante">Santé,</a></Tabbable>
+          <Tabbable as="li"><a href="#autre">… quoi d’autre ?</a></Tabbable>
         </NavLinks>
       </CollapseWrapper>
     </Tween>
