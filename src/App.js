@@ -15,7 +15,7 @@ const Container = styled.div`
     height: 100%;
     width: 100vw;
     overflow: hidden;
-    padding-top: 6.5rem;
+    margin-top: 6.5rem;
   }
 
   #container section {
